@@ -8,13 +8,14 @@ export class AngmatenvExtension {
 
   static async provider([envs, angular]: [EnvsMain, AngularV13Main]) {
     // Use any of the "angular.override..." transformers, for example:
-    const compilerOptions = await angular.overrideCompilerOptions({
-      fullTemplateTypeCheck: false
-    });
+    // const compilerOptions = await angular.overrideCompilerOptions({
+    //   fullTemplateTypeCheck: true
+    // });
     const angularOptions = await angular.overrideAngularOptions({
       styles: ['./node_modules/@angular/material/prebuilt-themes/indigo-pink.css']
     });
-    const AngmatenvEnv = angular.compose([compilerOptions, angularOptions]);
+    // const AngmatenvEnv = angular.compose([compilerOptions, angularOptions]);
+    const AngmatenvEnv = angular.compose([angularOptions]);
     envs.registerEnv(AngmatenvEnv);
 
     return new AngmatenvExtension(angular)
