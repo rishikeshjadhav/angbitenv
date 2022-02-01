@@ -9,5 +9,11 @@
  */
 
 {
+    "ui/autocomplete": {
+        "scope": "",
+        "version": "",
+        "mainFile": "public-api.ts",
+        "rootDir": "scope/ui/autocomplete"
+    },
     "$schema-version": "14.9.0"
 }
